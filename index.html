@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1B7578">
+  <meta name="description" content="Proyecto de practica - Clima JS">
+  <meta name="author" content="ZKC">
+  <meta name="copyright" content="Todos los derechos reservados © al canal de YouTube 'Programación Accesible' ">
+
+  <title>Proyecto Clima JS</title>
+  <script src="https://kit.fontawesome.com/c3a0547943.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" type="image/png" href="img/js.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<!-------------------- Cuerpo principal -------------------->
+	<main>
+		<!-------------------- Buscador -------------------->
+		<div class="container-form">
+			<form id="search-from">
+				<div class="container-search">
+					<input type="text" class="search" id="id-search" autocomplete="off" autocorrect="off" placeholder="Buscar ciudad">
+				</div>
+			</form>
+		</div>
+		<!-------------------- Fin del Buscador -------------------->
+
+		<!-------------------- Caja de busqueda -------------------->
+		<div class="center-container">
+			<div class="container-card" id="card">
+				<div class="city" id="city">Cipolletti, Arg</div>
+				<div>Fecha:</div>
+				<div class="date" id="date">11/12/1998</div>
+
+				<div class="temperature">
+					<img src="img/termometro.png" id="temp-img" alt="termometro">
+					<div class="temp" id="temp">14º</div>
+				</div>
+
+				<div class="weather" id="weather">Sol</div>
+				<div>Min / Max</div>
+				<div class="range" id="range">12º / 19º</div>	
+			</div>
+		</div>
+		<!-------------------- Fin del Caja de busqueda -------------------->
+	</main>
+	<!-------------------- Fin del Cuerpo principal -------------------->
+
+	<!-------------------- Boton de redes sociales -------------------->
+	<section>
+		<div class="container-button">
+       <input type="checkbox" class="button-main" id="button-main">
+
+       <div class="redes">
+          <a href="https://facebook.com/AlfredCallejero" target="_blank" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/Alfred17_" target="_blank" class="fa fa-twitter"></a>
+          <a href="https://instagram.com/barragan.alfred12" target="_blank" class="fa fa-instagram"></a>
+       </div>
+
+       <div class="button-secondary">
+          <label for="button-main" class="fa fa-plus"></label>
+       </div>
+    </div>
+  </section>
+  <!-------------------- Fin de Boton de redes sociales -------------------->
+
+	<script src="js/main.js"></script>
+</body>
+</html>

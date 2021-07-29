@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  /* variables */
+  /*sb: sombra
+  	cp: cuerpo
+  	ep: elementos del cuerpo */
+  --sb-box-shadow: -5px -5px 10px -4px rgba(255, 255, 255, 0.05),
+               5px 5px 15px rgba(0, 0, 0, 0.5);
+  --cp-color:#2B0F30;
+  --ep-color:#3E1645;
+}
+body {
+	background: url(../img/fondo4.svg) repeat center top var(--cp-color);
+}
+
+/*-------------------- Buscador --------------------*/
+.container-form {
+	margin: 3.125rem 1.25rem 1.25rem 1.25rem;
+}
+.container-search {
+	max-width: 30rem;
+	margin: 0px auto;
+	padding: 0.625rem 1.25rem;
+	background-color: var(--ep-color);
+	box-shadow: var(--sb-box-shadow);
+	border-radius: 0.75rem;
+}
+.search {
+	width: 100%;
+	background-color: var(--ep-color);
+	border: none;
+	font-size: 1rem;
+	color: #fff;
+}
+.search:focus {
+	outline: none;
+}
+.search::placeholder {
+	color: #fff;
+}
+/*-------------------- Fin del Buscador --------------------*/
+
+/*-------------------- Caja de busqueda --------------------*/
+.container-card {
+	display: block;
+	max-width: 30rem;
+	margin: 0px auto;
+	background-color: var(--ep-color);
+	color: #fff;
+	padding: 1.25rem;
+	text-align: center;
+	border-radius: 0.75rem;
+	display: none;
+	box-shadow: var(--sb-box-shadow);
+}
+.city {
+	font-size: 2.5rem;
+	text-transform: uppercase; /*siempre mayusculas*/
+	margin-bottom: 0.5rem;
+}
+.date {
+	font-size: 0.9rem;
+	margin-bottom: 1.5rem;
+}
+.temperature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+.temperature img {
+	width: 5rem;
+	margin-right: 0.625rem;
+}
+.temp {
+	font-size: 2rem;
+	font-weight: bold;
+}
+.weather {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	text-transform: capitalize;
+}
+/* responsive del container-card */
+@media screen and (max-width: 22.5rem) {
+	.container-card {
+		width: 20rem !important;
+	}
+}
+/*-------------------- Fin de Caja de busqueda --------------------*/
+
+/*-------------------- Boton de redes sociales --------------------*/
+.container-button{
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+}
+.button-main{
+  display: none;
+}
+.redes a, .button-secondary label{
+  display: block;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: var(--sb-box-shadow);
+  transition: all 500ms ease;
+}
+.redes a{
+  margin-bottom: -0.938rem;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0.75rem;
+}
+.redes a:hover{
+  background: #00FF2E;
+  color: #000;
+}
+.button-main:checked~ .redes a{
+  margin-bottom: 0.625rem;
+  opacity: 1;
+  visibility: visible;
+}
+/* ~ selecciona el ítem que 
+esté inmediatamente después 
+y todos los siguientes*/
+.button-secondary label{
+  cursor: pointer;
+  background: #000;
+  font-size: 1.25rem;
+}
+.button-main:checked~ .button-secondary label{
+  transform: rotate(135deg);
+  font-size: 1.25rem;
+}
+/*-------------------- Fin de Boton de redes sociales --------------------*/
