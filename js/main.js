@@ -26,7 +26,7 @@ function updateImages(data) {
   tempImg.src = src;
 }
 
-async function search(query) {
+async function search(query) { //funcion asincrona, nos permite obtener la info de la API
   try {
     const response = await fetch(`${api.url}?q=${query}&appid=${api.key}&lang=es`);
     const data = await response.json();
@@ -43,7 +43,7 @@ async function search(query) {
   }
 }
 
-function toCelsius(kelvin) {
+function toCelsius(kelvin) { //transforma a unidad celsius
   return Math.round(kelvin - 273.15);
 }
 
