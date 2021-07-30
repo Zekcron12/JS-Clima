@@ -11,6 +11,15 @@
                5px 5px 15px rgba(0, 0, 0, 0.5);
   --cp-color:#2B0F30;
   --ep-color:#3E1645;
+    /*Variables del pop-up*/
+  --dark-box-shadow: -7px -7px 10px 0px rgba(255, 255, 255, 0.05),
+        			 -4px -4px 5px 0px rgba(255, 255, 255, 0.05),
+       				  7px 7px 10px 0px rgba(0, 0, 0, 0.5),
+				      4px 4px 5px 0px rgba(0, 0, 0, 0.5),
+				      inset 0px 0px 0px 0px rgba(255, 255, 255, 0.05),
+				      inset 0px 0px 0px 0px rgba(255, 255, 255, 0.05),
+				      inset 0px 0px 0px 0px rgba(255, 255, 255, 0.05),
+				      inset 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
 }
 body {
 	background: url(../img/fondo4.svg) repeat center top var(--cp-color);
@@ -101,7 +110,7 @@ body {
 .button-main{
   display: none;
 }
-.redes a, .button-secondary label{
+.redes a, .button-secondary label, .redes input{
   display: block;
   text-decoration: none;
   background: #000;
@@ -114,7 +123,7 @@ body {
   box-shadow: var(--sb-box-shadow);
   transition: all 500ms ease;
 }
-.redes a{
+.redes a, .redes input{
   margin-bottom: -0.938rem;
   opacity: 0;
   visibility: hidden;
@@ -142,3 +151,95 @@ y todos los siguientes*/
   font-size: 1.25rem;
 }
 /*-------------------- Fin de Boton de redes sociales --------------------*/
+
+/* -------------------- PopUp - Bitácora -------------------- */
+.modal-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999;
+  pointer-events: none;
+  opacity: 0;  
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 37.5rem;
+  max-width: 100%;
+  padding: 1.875rem 1.875rem;
+  margin: 0.625rem;
+  border-radius: 0.625rem;
+  background: #131319;
+  box-shadow: var(--dark-box-shadow);
+}
+.modal h1 {
+  margin: 0.125rem;
+  font-weight: 500;
+  letter-spacing: 0.063rem;
+  color: #03a9f4;
+}
+.modal p {
+  font-size: 0.875rem;
+  text-align: justify;
+  line-height: 1.375rem;
+  color: #fff;
+  opacity: 0.8;
+  font-weight: 500;
+}
+.modal span {
+  font-size: 0.75rem;
+  color: #EC1B1B;
+  margin-top: 0.125rem;
+  font-weight: 900;
+}
+.author {
+  text-align: center !important; 
+  font-style: oblique; 
+  font-size: 0.7rem !important;
+  opacity: 0.5 !important;
+}
+.modal .boton-popup {
+  position: absolute;
+  top: 0.313rem;
+  right: 0.625rem;
+  padding: 0.125rem 0.438rem;
+  z-index: 300;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.875rem;
+  border: 0;
+  border-radius: 6.25rem;
+  color: #000;
+  background: #2C2C35;
+  box-shadow: -5px -5px 10px rgb(255 255 255 / 5%), 5px 5px 15px rgb(0 0 0 / 50%);
+}
+.modal .boton-popup:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: inset -3px -3px 7px #000,
+              inset 3px 3px 5px #000;
+  z-index: 250;
+  border-radius: 6.25rem;
+  opacity: 0.2;
+}
+/* -------------------- Fin del PopUp - Bitácora -------------------- */
