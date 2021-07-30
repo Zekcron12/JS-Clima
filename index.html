@@ -56,21 +56,47 @@
 	<!-------------------- Boton de redes sociales -------------------->
 	<section>
 		<div class="container-button">
-       <input type="checkbox" class="button-main" id="button-main">
+      <input type="checkbox" class="button-main" id="button-main">
 
-       <div class="redes">
-          <a href="https://facebook.com/AlfredCallejero" target="_blank" class="fa fa-facebook"></a>
-          <a href="https://twitter.com/Alfred17_" target="_blank" class="fa fa-twitter"></a>
-          <a href="https://instagram.com/barragan.alfred12" target="_blank" class="fa fa-instagram"></a>
-       </div>
+      <div class="redes">
+       <a id="open" class="fas fa-pencil-alt"><input type="button"></a>
+       <a href="https://facebook.com/AlfredCallejero" target="_blank" class="fa fa-facebook"></a>
+       <a href="https://twitter.com/Alfred17_" target="_blank" class="fa fa-twitter"></a>
+       <a href="https://instagram.com/barragan.alfred12" target="_blank" class="fa fa-instagram"></a>
+      </div>
 
-       <div class="button-secondary">
-          <label for="button-main" class="fa fa-plus"></label>
-       </div>
+      <div class="button-secondary">
+       <label for="button-main" class="fa fa-plus"></label>
+      </div>
     </div>
   </section>
   <!-------------------- Fin de Boton de redes sociales -------------------->
 
+  <!-------------------- Bitacora - POP UP -------------------->
+  <section id="modal_sobremi" class="modal-container">
+    <div class="modal">
+      <button id="close" class="boton-popup"><i class="fas fa-times-circle"></i></button>
+      <h1>Bitácora</h1>
+      <p>El propósito del proyecto fue realizar práctica para mantener un plazo de estudio el cual tiene como objetivo principal el aprendizaje del lenguaje de programación JavaScript y de la correcta maquetación.</p>
+      <br>
+      <p>Proyecto realizado con las tecnologías:</p>
+      <p><span>▶ HTML5</span></p>
+      <p><span>▶ CSS3</span></p>
+      <p><span>▶ JavaScript</span></p>
+
+      <p>Conocimientos aplicados:</p>
+      <p><span>▶ Variables</span></p>
+      <p><span>▶ Constantes</span></p>
+      <p><span>▶ Función flecha</span></p>
+      <p><span>▶ Condicionales</span></p>
+      <p><span>▶ Template strings</span></p>
+      <p><span>▶ API</span></p>
+      <p><span>▶ Objeto Math</span></p>
+    </div>
+  </section>
+  <!-------------------- Fin de la Bitacora - POP UP -------------------->
+
 	<script src="js/main.js"></script>
+	<script>document.oncontextmenu = function(){return false;}</script> <!--Bloquear -->
 </body>
 </html>
